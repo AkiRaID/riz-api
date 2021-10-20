@@ -25,6 +25,21 @@ async function sleep(ms) {
 }
 
 loghandler = {
+  notparam: {
+
+        status: false,
+
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter apikey',
+        getApikey: 'gak punya apikey? chat gw aja yaaa di wa.me/62823283033323 , key nya gratis kok gan, jadi santuyy ajaa'
+    },
+    notkey: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter key'
+    },
     noturl: {
         status: false,
         creator: `${creator}`,
@@ -36,6 +51,86 @@ loghandler = {
         creator: `${creator}`,
         code: 406,
         message: 'Masukkan query'
+    },
+    notkata: {
+
+        status: false,
+
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter kata'
+    },
+    nottext: {
+
+        status: false,
+
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter text'
+    },
+    nottext2: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter text2'
+    },
+    notnabi: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter nabi'
+    },
+    nottext3: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter text3'
+    },
+    nottheme: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter theme'
+    },
+    notusername: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter username'
+    },
+    notvalue: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter value'
+    },
+    notheme: {
+    	status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'theme tidak tersedia silahkan masukkan texmaker/list atau baca documentasi'
+     },
+    invalidKey: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'apikey invalid, gak punya apikey? chat gw aja yaaa di wa.me/6283898698875 , key nya gratis kok gan, jadi santuyy ajaa'
+    },
+    invalidlink: {
+        status: false,
+        creator: `${creator}`,
+        message: 'error, mungkin link anda tidak valid.'
+    },
+    invalidkata: {
+        status: false,
+        creator: `${creator}`,
+        message: 'error, mungkin kata tidak ada dalam api.'
+    },
+    notAddApiKey: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter status, apikeyInput, email, nomorhp, name, age, country, exp'
     },
     error: {
         status: 404,
