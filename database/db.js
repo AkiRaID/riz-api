@@ -3,9 +3,9 @@ monk = require('monk'),
 { color } = require(__path + '/lib/color.js')
 
 // Connection URL
-let url = 'https://rizapi.herokuapp.com';
+let url = 'https://akiraapi.herokuapp.com';
 try {
-if(url == 'https://rizapi.herokuapp.com') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
+if(url == 'https://akiraapi.herokuapp.com') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
 } catch (e) {
 return;
 }
