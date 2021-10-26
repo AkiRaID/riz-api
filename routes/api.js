@@ -128,24 +128,6 @@ loghandler = {
 }
 
 const listkey = ["SubsKira", "AkiraYT"];
-//router.use(favicon(__path + "/views/logo.ico"));
-
-var len = 15
-        var arr = '123456789abcdefghijklmnopqrstuvwxyz'
-        var random = '';
-
-        for (var i = len; i > 0; i--) {
-            random += arr[Math.floor(Math.random() * arr.length)];
-        }
-
-        var lenn = 5
-        var randomlagi = '';
-
-        for (var i = lenn; i > 0; i--) {
-            randomlagi += arr[Math.floor(Math.random() * arr.length)];
-        }
-
-        var randomTextNumber = random+randomlagi+'Akira'+'AkiraYT';
 
 //APIKEY
 router.get('/cekapikey', async (req, res, next) => {
