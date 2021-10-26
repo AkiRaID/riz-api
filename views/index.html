@@ -1,275 +1,995 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  
+<!-- Mirrored from api-alphabot.herokuapp.com/docs by HTTrack Website Copier/3.x [XR&CO'2017], Mon, 11 Oct 2021 22:15:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="FREE REST API">
-    <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
-    <meta name="author" content="Akira">
-    <title>Akira - API</title>
-    <meta property="og:site_name" name="og:site_name" content="Akira APIs">
-    <meta property="og:title" name="og:title" content="Akira - REST APIs">
-    <meta property="og:url" name="og:url" content="https://akirayt-api.herokuapp.com/">
-    <meta property="og:image" name="og:image" content="../images/logo.jpeg">
-    <meta property="og:description" name="og:description" content="Free Rest API For You">
+    <title> Akira -Api | Dashboard</title>
     <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
+    <audio autoplay="true" src="../external.html?link=https://j.top4top.io/m_20985yali1.mp3">
+    </audio>
     <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="preconnect" href="../external.html?link=https://fonts.gstatic.com/">
+    <link href="../external.html?link=https://fonts.googleapis.com/css2?family=Original+Surfer&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../vendors/owl-carousel-2/owl.theme.default.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="../images/logo.jpeg" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
-    <iframe src="../audio/audio.mp3" hidden="hidden" allow="autoplay"; encrypt-media></iframe>
-    </head>
+    <link rel="shortcut icon" href="https://i.ibb.co/MngCXjZ/20211009-052311.jpg"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/MngCXjZ/20211009-052311.jpg"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" type="image/x-icon" />
+    <script src="../code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="../ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+   <meta name="description" content="Akira Rest APIs For Whatsapp bot">
+   <meta property="og:image" content="https://i.ibb.co/MngCXjZ/20211009-052311.jpg">
+   <meta property="og:site_name" content="REST API">
+   <meta name="keywords" content="AKIRA API">
+   <meta name="author" content="Akira">
+  </head>
   
   <body>
   <body id="page-top" onload="getvisitor();">
     <div class="container-scroller">
-      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <a class="sidebar-brand brand-logo rounded-circle" href="#"><img src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="#"><img src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" class="rounded-circle" alt="logo" /></a>
         </div>
-        <div class="navbar-menu-wrapper d-flex align-items-stretch">
-          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-            <span class="mdi mdi-menu"></span>
-          </button>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item nav-profile dropdown">
-              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <div class="nav-profile-img">
-                  <img src="../images/logo.jpeg" alt="image">
-                  <span class="availability-status online"></span>
+       <font face="Original Surfer">
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" alt="">
+                  <span class="count bg-success"></span>
                 </div>
-                <div class="nav-profile-text">
-                  <p class="mb-1 text-black">Akira</p>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal">さAkira</h5>
+                  <span>Not Programmer</span>
                 </div>
-              </a>
-              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="/about">
-                  <i class="mdi mdi-creation menu-icon"></i> About </a>
               </div>
-            </li>
-            <li class="nav-item d-none d-lg-block full-screen-link">
-              <a class="nav-link">
-                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                <i class="mdi mdi-bell-outline"></i>
-                <span class="count-symbol bg-danger"></span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                <h6 class="p-3 mb-0">Notifications</h6>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
+              <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <a href="#" class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                    <div class="preview-icon bg-success">
-                      <i class="mdi mdi-calendar"></i>
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-primary"></i>
                     </div>
                   </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject font-weight-normal mb-1">Welcome To Riz API</h6>
-                   </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                  </div>
                 </a>
-            </li>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-onepassword  text-info"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-calendar-today text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Documentation</span>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" href="#">
+          <span class="menu-icon">
+          <i class="mdi mdi-home"></i>
+          </span>
+          <span class="menu-title">Home</span>
+          </a>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-downloader" aria-expanded="false" aria-controls="ui-downloader">
+          <span class="menu-icon">
+          <i class="mdi mdi-download"></i>
+          </span>
+          <span class="menu-title">Downloader API</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-downloader">
+          <ul class="nav flex-column sub-menu">
+         <li class="nav-item"> <a class="nav-link"href="api/yutub/video?url=https://youtu.be/v0ej6EJGqos&apikey=SubsKira">YouTube Video</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/yutub/audio?url=https://youtu.be/v0ej6EJGqos&apikey=Subskira">YouTube Audio</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/yutub/search?video=Netsujou No Spectrum&apikey=Subskira">YouTube Search</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/fbdown/?url=MASUKIN_URL&apikey=Subskira">Facebook</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/tiktod/?url=MASUKIN_URL&apikey=Subskira">Tiktok</a></li>
           </ul>
-          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-            <span class="mdi mdi-menu"></span>
-          </button>
-        </div>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-islamic" aria-expanded="false" aria-controls="ui-islamic">
+          <span class="menu-icon">
+          <i class="mdi mdi-attachment"></i>
+          </span>
+          <span class="menu-title">Islamic Features</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-islamic">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link"href="api/hadits?kitab=bukhari&nomor=52&apikey=Subskira">Hadits Shahih</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/quran?surah=1&ayat=2&apikey=Subskira">Al Qur'an</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/tahlil?apikey=Subskira">Doa Tahlil</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/wirid?apikey=Subskira">Doa Wirid</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/asmaulhusna?apikey=Subskira">Asmaul Husna</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/doaharian?apikey=Subskira">Doa Harian</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/ayatkursi?apikey=Subskira">Ayat Kursi</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/kisahnabi?nabi=muhammad&apikey=Subskira">Kisah Nabi</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/niatshalat?apikey=Subskira">Niat Shalat</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/muslim/bacaanshalat?apikey=Subskira">Bacaan Shalat</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-image" aria-expanded="false" aria-controls="ui-image">
+          <span class="menu-icon">
+          <i class="mdi mdi-image"></i>
+          </span>
+          <span class="menu-title">Images Features</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-image">
+          <ul class="nav flex-column sub-menu">
+          
+           <li class="nav-item"> <a class="nav-link"href="api/wallpaper/teknologi?apikey=Subskira">Wallpaper Teknologi</a></li>
+             <li class="nav-item"> <a class="nav-link"href="api/wallpaper/programming?apikey=Subskira">Wallpaper Programming</a></li>
+             <li class="nav-item"> <a class="nav-link"href="api/wallpaper/cyberspace?apikey=Subskira">Wallpaper CyberSpace</a></li>
+             <li class="nav-item"> <a class="nav-link"href="api/wallpaper/muslim?apikey=Subskira">Wallpaper Muslim</a></li>
+             <li class="nav-item"> <a class="nav-link"href="api/wallpaper/pegunungan?apikey=Subskira">Wallpaper Mountain View</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-stalker" aria-expanded="false" aria-controls="ui-stalker">
+          <span class="menu-icon">
+          <i class="mdi mdi-auto-fix"></i>
+          </span>
+          <span class="menu-title">Stalker Features</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-stalker">
+          <ul class="nav flex-column sub-menu">          
+           <li class="nav-item"> <a class="nav-link"href="api/tiktod/stalk/?username=akirayt_id&apikey=Subskira">Tiktok Stalk</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/ig/stalk?username=muhammadreihansaputra27&apikey=Subskira">Instagram Stalk</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/github/stalk?username=AkiRaID&apikey=Subskira">Github Stalk</a></li>
+            <li class="nav-item"> <a class="nav-link"href="api/repository/stalk?username=akirabotv3&apikey=Subskira">Repository Stalk</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-random" aria-expanded="false" aria-controls="ui-random">
+          <span class="menu-icon">
+          <i class="mdi mdi-heart-circle"></i>
+          </span>
+          <span class="menu-title">Random API</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-random">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/randomquote?apikey=Subskira">Quotes</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/randomquote/muslim?apikey=Subskira">Quotes Islami</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/quotes/kanye?apikey=Subskira">Quotes Kanye</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/random/asmaulhusna?apikey=Subskira">Asmaul Husna</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/random/meme?apikey=Subskira">Meme</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/random/wallpaper?apikey=Subskira">Wallpaper</a></li>
+          </ul>
+          </div>
+          </li>        
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-maker2d" aria-expanded="false" aria-controls="ui-maker2d">
+          <span class="menu-icon">
+          <i class="mdi mdi-image-album"></i>
+          </span>
+          <span class="menu-title">Text Maker 2D</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-maker2d">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/maker?text=Akira&apikey=Subskira">Maker 1</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker2?text=Akira&apikey=Subskira">Maker 2</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker3?text=Akira&apikey=Subskira">Maker 3</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker4?text=Akira&apikey=Subskira">Maker 4</a></li>
+          </ul>
+          </div>
+          </li>          
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-maker3d" aria-expanded="false" aria-controls="ui-maker3d">
+          <span class="menu-icon">
+          <i class="mdi mdi-image-area"></i>
+          </span>
+          <span class="menu-title">Text Maker 3D</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-maker3d">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/maker3d?text=Akira&apikey=Subskira">Maker 1</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker3d/no2?text=Akira&apikey=Subskira">Maker 2</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker3d/no3?text=Akira&apikey=Subskira">Maker 3</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker3d/no4?text=Akira&apikey=Subskira">Maker 4</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker3d/no5?text=Akira&apikey=Subskira">Maker 5</a></li>
+            </ul>
+          </div>
+            </li>          
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-spesialmaker" aria-expanded="false" aria-controls="ui-spesialmaker">
+          <span class="menu-icon">
+          <i class="mdi mdi-star"></i>
+          </span>
+          <span class="menu-title">Spesial Maker</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-spesialmaker">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="api/maker/special/transformer?text=Akira&apikey=Subskira">Transformer</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/maker/special/epep?text=Akira&apikey=Subskira">Sertifikat Epep</a></li>
+          </ul>
+          </div>
+          </li>          
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-photooxy" aria-expanded="false" aria-controls="ui-photooxy">
+          <span class="menu-icon">
+          <i class="mdi mdi-image-filter"></i>
+          </span>
+          <span class="menu-title">Photooxy</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-photooxy">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker?text=Subscribe&text2=Akira&theme=glitch&apikey=Subskira">Glitch</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker?text=Subscribe&text2=Channel&text3=Akira&theme=google-suggestion&apikey=Subskira">Google Suggestion</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/game?text=Subscribe&text2=Akira&theme=pubg&apikey=Subskira">PUBG</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/game?text=Subscribe&text2=Akira&theme=battlefield&apikey=Subskira">BattleField</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/senja?text=Akira&theme=coffee-cup&apikey=Subskira">Coffee Cup</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/senja?text=Akira&theme=coffee-cup2&apikey=Subskira">Coffee Cup 2</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/metallic?text=Akira&theme=neon&apikey=Subskira">Neon</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/metallic?text=Akira&theme=glow&apikey=Subskira">Glow</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/alam?text=Akira&theme=summer&apikey=Subskira">Summer</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/alam?text=Akira&theme=flower&apikey=Subskira">Flower</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/random?text=Akira&theme=text-burn&apikey=Subskira">Text Burn</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/random?text=Akira&theme=art-quote&apikey=Subskira">Art Quote</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/roses?text=Akira&theme=wooden-boarch&apikey=Subskira">Wooden Boarch</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/textmaker/roses?text=Akira&theme=golden&apikey=Subskira">Golden Roses</a></li>
+          </ul>
+          </div>
+          </li>   
+		<li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-anime" aria-expanded="false" aria-controls="ui-anime">
+          <span class="menu-icon">
+          <i class="mdi mdi-dolly"></i>
+          </span>
+          <span class="menu-title">Anime Api</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-anime">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/anime/kusonime?search=planetarian&apikey=Subskira">Kusonime</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/manga?search=kimetsu no yaiba&apikey=Subskira">Manga</a></li>
+          </ul>
+          </div>
+          </li>       
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-asupan" aria-expanded="false" aria-controls="ui-asupan">
+          <span class="menu-icon">
+          <i class="mdi mdi-video"></i>
+          </span>
+          <span class="menu-title">Asupan Timeline</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-asupan">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/asupan/tiktok?apikey=Subskira">Tiktok Random Video</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan?apikey=Subskira">Asupan</a></li>
+		    <li class="nav-item"> <a class="nav-link" href="api/asupan/cecan?apikey=Subskira">Asupan Cecan</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan/hijaber?apikey=Subskira">Asupan Hijaber</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan/santuy?apikey=Subskira">Asupan Santuy</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan/ukty?apikey=Subskira">Asupan Ukhty</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan/bocil?apikey=Subskira">Asupan Bocil</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan/ghea?apikey=Subskira">Asupan Ghea</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/asupan/rikagusriani?apikey=Subskira">Asupan Rika</a></li>
+          </ul>
+          </div>
+          </li>  
+		<li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-nsfw" aria-expanded="false" aria-controls="ui-nsfw">
+          <span class="menu-icon">
+          <i class="mdi mdi-fire"></i>
+          </span>
+          <span class="menu-title">Nsfw Features</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-nsfw">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/ass?apikey=Subskira">Ass</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/ahegao?apikey=Subskira">Ahegao</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/bdsm?apikey=Subskira">Bdsm</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/blowjob?apikey=Subskira">Blowjob</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/cuckold?apikey=Subskira">Cuckold</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/cum?apikey=Subskira">Cum</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/ero?apikey=Subskira">Ero</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/femdom?apikey=Subskira">Femdom</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/foot?apikey=Subskira">Foot</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/gangbang?apikey=Subskira">Gangbang</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/glasses?apikey=Subskira">Glasses</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/hentai?apikey=Subskira">Hentai</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/hentaigif?apikey=Subskira">Hentai (GIF)</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/jahy?apikey=Subskira">Jahy</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/masturbation?apikey=Subskira">Masturbation</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/nsfwNeko?apikey=Subskira">Neko</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/orgy?apikey=Subskira">Orgy</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/panties?apikey=Subskira">Panties</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/pussy?apikey=Subskira">Pussy</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/thighs?apikey=Subskira">Thighs</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/nsfw/yuri?apikey=Subskira">Yuri</a></li>
+          </ul>
+          </div>
+          </li>
+		<li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-games" aria-expanded="false" aria-controls="ui-games">
+          <span class="menu-icon">
+          <i class="mdi mdi-google-controller"></i>
+          </span>
+          <span class="menu-title">Games Api</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-games">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/kuis/caklontong?apikey=Subskira">Cak Lontong</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/kuis/tebakgambar?apikey=Subskira">Tebak Gambar</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/kuis/family100?apikey=Subskira">Family 100</a></li>
+          </ul>
+          </div>
+          </li>     
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-cecan" aria-expanded="false" aria-controls="ui-cecan">
+          <span class="menu-icon">
+          <i class="mdi mdi-gender-female"></i>
+          </span>
+          <span class="menu-title">Gacha Cecan</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-cecan">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/cewe/vietnam?apikey=Subskira">Cecan Vietnam</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/cewe/malaysia?apikey=Subskira">Cecan Malaysia</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/cewe/korea?apikey=Subskira">Cecan Korea</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/cewe/indonesia?apikey=Subskira">Cecan Indonesia</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/cewe/japan?apikey=Subskira">Cecan Japan</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/cewe/thailand?apikey=Subskira">Cecan Thailand</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/cewe/china?apikey=Subskira">Cecan China</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-filmapik" aria-expanded="false" aria-controls="ui-filmapik">
+          <span class="menu-icon">
+          <i class="mdi mdi-film"></i>
+          </span>
+          <span class="menu-title">Film Apik</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-filmapik">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/filmapik/search?film=avenger&apikey=Subskira">Cari Film</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/filmapik/kategori?film=action&apikey=Subskira">Cari Kategori Film</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/filmapik/terbaru?apikey=Subskira">Film Terbaru</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/filmapik/play?id=142455&apikey=Subskira">Play Film</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-lk21" aria-expanded="false" aria-controls="ui-lk21">
+          <span class="menu-icon">
+          <i class="mdi mdi-deviantart"></i>
+          </span>
+          <span class="menu-title">Lk21 Api</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-lk21">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/lk21/search?film=avenger&apikey=Subskira">Cari Film</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/lk21/terbaru?apikey=Subskira">Film Terbaru</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/lk21/comingsoon?apikey=Subskira">Film Yg Akan Datang</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/lk21/tvseries?apikey=Subskira">Series TV</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/lk21/year?tahun=2021&apikey=Subskira">Berdasarkan Tahun</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/lk21/country?negara=indonesia&apikey=Subskira">Berdasarkan Negara</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/lk21/genre?tipe=action&apikey=Subskira">Berdasarkan Genre</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-news" aria-expanded="false" aria-controls="ui-news">
+          <span class="menu-icon">
+          <i class="mdi mdi-newspaper"></i>
+          </span>
+          <span class="menu-title">News Api</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-news">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/news">Jenis Berita</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/news/cnn?type=JENIS_BERITA&apikey=Subskira">Cnn News</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/news/cnbc?type=JENIS_BERITA&apikey=Subskira">CnBc News</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/news/republika?type=JENIS_BERITA&apikey=Subskira">Republika News</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/news/tempo?type=JENIS_BERITA&apikey=Subskira">Tempo News</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/news/antara?type=JENIS_BERITA&apikey=Subskira">Antara News</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/news/kumparan?type=JENIS_BERITA&apikey=Subskira">Kumparan News</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-encode" aria-expanded="false" aria-controls="ui-encode">
+          <span class="menu-icon">
+          <i class="mdi mdi-directions-fork"></i>
+          </span>
+          <span class="menu-title">Encode & Decode</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-encode">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/base?apikey=Subskira&type=base64&encode=AkiraID">Encode Base64</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/base?apikey=Subskira&type=base64&decode=Q2hlZW1zR2FudGVuZw==">Decode Base64</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/base?apikey=Subskira&type=base32&encode=AkiraID">Encode Base32</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/base?apikey=Subskira&type=base32&decode=INUGKZLNONDWC3TUMVXGO===">Decode Base32</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-others" aria-expanded="false" aria-controls="ui-others">
+          <span class="menu-icon">
+          <i class="mdi mdi-vpn"></i>
+          </span>
+          <span class="menu-title">Others Api</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-others">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/nulis?text=Subscribe My Channel Akira&apikey=Subskira">Nulis Buku</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/infonpm?query=Akira&hostname=Akiraa&apikey=Subskira">Info NPM</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/infogempa?apikey=Subskira">Info Gempa Terkini</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/infocuaca?provinsi=jakarta&apikey=Subskira">Info Cuaca Indonesia</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/infocuaca/dunia?apikey=Subskira">Info Cuaca Dunia</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/infocuaca/bandara?apikey=Subskira">Info Cuaca Bandara</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/infotsunami?apikey=Subskira">Info Tsunami</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/covidindo?apikey=Subskira">Covid Indo</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/covidworld?apikey=Subskira">Covid World</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/short/tiny?url=google.com&apikey=Subskira">Short Link</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/wikipedia?search=jembatan&apikey=Subskira">Wikipedia</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/drakorasia?search=tale&apikey=Subskira">Drakor Asia</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/fakedata?country=en&apikey=Subskira">Fake Data</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/hilih?kata=akira&apikey=Subskira">Kata Hilih</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/liriklagu?lagu=sayang&apikey=Subskira">Lirik Lagu</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/chordlagu?lagu=sayang&apikey=Subskira">Chord Lagu</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/kbbi?kata=pohon&apikey=Subskira">KBBI</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/kodepos?kota=jakarta&apikey=Subskira">Kode Pos</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/translate?kata=hello my friends&apikey=Subskira">Translate</a></li>
+            <li class="nav-item"> <a class="nav-link" href="api/gabut?apikey=Subskira">Gabut</a></li>
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item nav-category">
+          <span class="nav-link">Donasi</span>
+          </li>
+            </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-donasi" aria-expanded="false" aria-controls="ui-donasi">
+          <span class="menu-icon">
+          <i class="mdi mdi-paypal"></i>
+          </span>
+          <span class="menu-title">Donate</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-donasi">
+          <ul class="nav flex-column sub-menu">
+          
+          <li class="nav-item"> <a class="nav-link"href="../external.html?link=https://saweria.co/akira27">Saweria</a></li>
+          </ul>
+          </div>
+          </li>
+          </li>
+          </li>
+          <li class="nav-item nav-category">
+          <span class="nav-link">Script Wa Bot</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../external.html?link=https://m.youtube.com/channel/UCvVd-kAsrJUjg0bwKqxUPeg">
+              <span class="menu-icon">
+                <i class="mdi mdi-console-line"></i>
+              </span>
+              <span class="menu-title">Script Wa Bot</span>
+            
+           </a>
+          </li>
+          <li class="nav-item nav-category">
+          <span class="nav-link">Contact Me</span>
+          </li>
+          
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../external.html?link=https://wa.me/6282158549899">
+              <span class="menu-icon">
+                <i class="mdi mdi-whatsapp"></i>
+              </span>
+              <span class="menu-title">WhatsApp</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../external.html?link=https://instagram.com/muhammadreihansaputra27">
+              <span class="menu-icon">
+                <i class="mdi mdi-instagram"></i>
+              </span>
+              <span class="menu-title">Instagram</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../external.html?link=https://m.youtube.com/channel/UCvVd-kAsrJUjg0bwKqxUPeg">
+              <span class="menu-icon">
+                <i class="mdi mdi-youtube"></i>
+              </span>
+              <span class="menu-title">Youtube</span>
+            </a>
+          </li>
+           <li class="nav-item menu-items">
+            <a class="nav-link" href="../external.html?link=https://github.com/AkiRaID">
+              <span class="menu-icon">
+                <i class="mdi mdi-github-circle"></i>
+              </span>
+              <span class="menu-title">Github</span>
+            </a>
+            </li>
+        </ul>
+       </font>
       </nav>
       <div class="container-fluid page-body-wrapper">
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item nav-profile">
-              <a class="nav-link">
-                <div class="nav-profile-image">
-                  <img src="../images/logo.jpeg" alt="profile">
-                  <span class="login-status online"></span>
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="index.html"><big><i class="mdi mdi-biohazard text-primary"></i></big></a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex ">
+                  <input type="text" class="form-control" placeholder="Akira-api">
+                </form>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <a class="nav-link" href="#">
+                  <i class="mdi mdi-view-grid"></i>
+                </a>
+                </a>
+              </li>
+              <li class="nav-item dropdown border-left">
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                  <i class="mdi mdi-bell"></i>
+                  <span class="count bg-danger"></span>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                  <h6 class="p-3 mb-0">Messages</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" class="rounded-circle" alt="">
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">Akira Change Template</p>
+                      <p class="text-muted mb-0"> 1 Minutes ago </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" class="rounded-circle" alt="">
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">Change Profil Image</p>
+                      <p class="text-muted mb-0"> 15 Minutes ago </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" class="rounded-circle" alt="">
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">Add new features </p>
+                      <p class="text-muted mb-0"> 18 Minutes ago </p>
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                  <h6 class="p-3 mb-0">Notifications</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-calendar text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Sun, 10 Oktober 2021</p>
+                      <p class="text-muted ellipsis mb-1">Change To New Template</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                      <p class="text-muted ellipsis mb-0"> Update dashboard </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-link-variant text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Added Features</p>
+                      <p class="text-muted ellipsis mb-0"> Along with template updates</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <p class="p-3 mb-0 text-center">See all notifications</p>
                 </div>
-                <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">Akira</span>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                    <img class="img-xs rounded-circle" src="https://i.ibb.co/MngCXjZ/20211009-052311.jpg" alt="">
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">さAkira</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                  <h6 class="p-3 mb-0">Profile</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-logout text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Log out</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <p class="p-3 mb-0 text-center">Advanced settings</p>
                 </div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
-              </a>
-            </li>
-           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-sosmed" aria-expanded="false" aria-controls="ui-sosmed">
-              <span class="menu-title">Social Media API</span>
-              <i class="menu-arrow"></i>
-              <i class="mdi mdi-laptop menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-sosmed">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tiktok?url=https://vt.tiktok.com/ZSe8Xfwd1">Tiktok Download</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/igdl?url=https://www.instagram.com/p/CTMnneTl8YJ/?utm_medium=copy_link">Instagram Download</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/youtube?url=https://youtu.be/5C8yvJUVB-0">Youtube Download</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/twitter?url=https://twitter.com/PassengersMovie/status/821025484150423557">Twitter Download</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/pindl?url=https://id.pinterest.com/pin/361906520063070744">Pinterest Download</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/mediafire?url=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file">MediaFire Download</a></li>
-              </ul>
-            </div>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-animanga" aria-expanded="false" aria-controls="ui-animanga">
-              <span class="menu-title">Anime & Manga API</span>
-              <i class="menu-arrow"></i>
-              <i class="mdi mdi-cat menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-animanga">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nhentai?code=298547">Nhentai</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nHentaiSearch?query=gotoubun">Nhentai Search</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/doujindesuSearch?query=gotoubun">Doujindesu Search</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="api/anime/kusonime?search=boruto">Kusonime Search</a></li>
-              </ul>
-            </div>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-search" aria-expanded="false" aria-controls="ui-search">
-              <span class="menu-title">Searching API</span>
-              <i class="menu-arrow"></i>
-              <i class="mdi mdi-book-search menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-search">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/google?query=kapan+indonesia+merdeka">Google Search</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/pinterest?query=itsuki+nakano">Pinterest Search</a></li>
-              </ul>
-            </div>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-image" aria-expanded="false" aria-controls="ui-image">
-              <span class="menu-title">Random Image API</span>
-              <i class="menu-arrow"></i>
-              <i class="mdi mdi-image menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-image">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/randomimage/waifu">Ramdom Waifu</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/randomimage/neko">Random Neko</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/randomimage/husbu">Random Husbu</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/randomimage/loli">Random Loli</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/randomimage/milf">Random Milf</a></li>
-                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/randomimage/cosplay">Random Cosplay</a></li>
-              </ul>
-            </div>
-          </li>
-          
-          <li class="nav-item sidebar-actions">
-              <span class="nav-link">
-                <div class="border-bottom">
-                  <h6 class="font-weight-normal mb-3">Made With Akira</h6>
-                </div>
-                <div class="mt-4">
-                <span class="menu-icon">
-                     <i class="mdi mdi-whatsapp"></i>
-                   </span>
-                 <a class="menu-title" href="https://wa.me/6282158549899">WhatsApp</a>
-                </div>
-                <div class="mt-4">
-                <span class="menu-icon">
-                     <i class="mdi mdi-instagram"></i>
-                   </span>
-                 <a class="menu-title" href="https://instagram.com/muhammadreihansaputra27">Instagram</a>
-                </div>
-                <div class="mt-4">
-                <span class="menu-icon">
-                     <i class="mdi mdi-github-circle"></i>
-                   </span>
-                 <a class="menu-title" href="https://github.com/AkiRaID">GitHub</a>
-                </div>
-              </span>
-              <div class="mt-4">
-                <span class="menu-icon">
-                     <i class="mdi mdi-youtube"></i>
-                   </span>
-                 <a class="menu-title" href="https://m.youtube.com/channel/UCvVd-kAsrJUjg0bwKqxUPeg">Youtube</a>
-                </div>
-                <div class="mt-4">
-                <span class="menu-icon">
-                     <i class="mdi mdi-github-circle"></i>
-                   </span>
-            </li>
-          </ul>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
         </nav>
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="page-header">
-              <h3 class="page-title">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-home"></i>
-                </span> Dashboard
-              </h3>
-              <nav aria-label="breadcrumb">
-                <ul class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page">
-                  </li>
-                </ul>
-              </nav>
-            </div>
             <div class="row">
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="card ngentod-merah card-img-holder text-white">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-3">IP Address<i class="mdi mdi-access-point-network mdi-24px float-right"></i>
-                    </h4>
-                    <h2 class="mb-5" id="ip">Waiting...</h2>
-                    <h6 class="card-text">Your IP Address</h6>
+                    <h5 class="font-weight-bold text-danger text-uppercase">IP Address</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="ip">Loading...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-access-point-network icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Your IP Address</font>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="card ngentod-biru card-img-holder text-white">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-3">Visitor<i class="mdi mdi-eye mdi-24px float-right"></i>
-                    </h4>
-                    <h2 class="mb-5" id="visitor">Waiting...</h2>
-                    <h6 class="card-text">Website Visitor</h6>
+                    <h6 class="font-weight-bold text-info text-uppercase">Your Battery</h6>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                        	<span id="batteryLevel"></span>
+                          <h3 class="mb-0" id="percentageLevel">Loading...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-battery-positive"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Percentase Your Battery</font>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="card ngentod-ungu card-img-holder text-white">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
                   <div class="card-body">
-                    <h4 class="font-weight-normal mb-3">Date<i class="mdi mdi-calendar mdi-24px float-right"></i>
-                    </h4>
-                    <h2 class="mb-5" id="datetime">Waiting...</h2>
-                    <h6 class="card-text" id="Ucapan">Date Now</h6>
+                    <h5 class="font-weight-bold text-success text-uppercase">Visitor</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="visits">Loading...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-eye icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Visit Web</font>
                   </div>
                 </div>
               </div>
-          <footer class="footer">
-            <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">©Copyright Akira</span>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-info text-uppercase">Date</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h4 class="mb-0" id="tanggal">Loading...</h4>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-calendar icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Date Now</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-success text-uppercase">Clock</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h4 class="mb-0" id="Clock">Loading...</h4>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-clock icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal" id="Ucapan">☕</font>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="../external.html?link=https://akirayt-api.herokuapp.com/api/cekapikey">
+              <div class="card card-round mt-5 stretch-card grid-margin">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-bold text-warning"><i <h4>CHECK APIKEY</h4>
+                </div>
+               <div class="card-body">
+                 <p class="status" style="font-size: 17px;"></p>
+                   <div class="form-group">
+                     <input class="form-control font-weight-bold text-center" type="text" placeholder="Masukkan Apikey" name="apikey" required>
+                   </div>
+                   <div class="form-group"><center>
+                     <button type="submit" class="btn btn-primary content-justify-center"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> <span class="font-weight-bold"> Submit</span></button></center>
+                   </div>
+               </div>
+             </div>
+            </form>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-5404310597803049" data-ad-slot="6657550061"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            <div class="row">
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mt-3 btn btn-outline-danger bg-transparent">
+                    <div id="demo" class="alert btn btn-outline-danger" role="alert">
+                      <span id="Statistic">Waiting...</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                      <h6 class="text-center font-weight-bold">Akira Rest APIs</h6><hr color="red">
+                     <div class="row content-justify-center">
+                       <img width="150px" height="150px" class="rounded-square img-thumbnail" id="image" src="" alt="images/logo1.png"><hr>
+                         <div class="col">
+                      <font size="2" face="Original Surfer" class="col mt-3 text-center text-uppercase font-weight-bold">&nbsp; &nbsp;Thanks To:<br>• Zahirr<br>• Farhan<br>• Adi Official<br>• Zeeone OFC<br>• The Last Generation [ TLG ]<br>• Muhammad Saw<br>• Allah Swt</font>
+                         </div>
+                         </div><hr>
+                     <font class="font-weight-bold" face="Original Surfer">
+                     <small class="text-center">• Jika Menemukan Bug Harap Segera Lapor <a href="https://wa.me/6282158549899">Disini</a></small><br>
+                     <small class="text-center">• Semua Fitur Free For All</small><br>
+                     <small class="text-center">• Cuman Gabut, Gk Ada Kerjaan :)</small>
+                     <small class="text-center"><br>• Apikey: <b>Subskira</b></small>
+                     <small class="text-center"><br>• Costum Apikey?? <a href="https://wa.me/6282158549899?text=bang+mau+costum+apikey">Klik Disini</a></small>
+                     </font>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="row">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-danger">Positif Corona</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="positif-corona"> </h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-biohazard icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Stay Safe Mencuci Tangan</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-danger">Dirawat</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="dirawat-corona"> </h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-ambulance icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Stay Safe Memakai Masker</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-success">Sembuh</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="sembuh-corona"> </h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-city icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Stay Safe Menjaga Jarak Aman</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-danger">Meninggal</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="meninggal-corona"> </h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-danger">
+                          <span class="mdi mdi-chemical-weapon icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Stay Safe Melakukan 3M</font>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="row">
+               <div class="col-xl-12 col-lg-12 col-md-12">
+                 <div class="card">
+                  <div class="card-body">
+                   <p style="text-align-last: center;font-size: 24px; margin-top: 0.5em;" class="card-text font-weight-bold">Tutorial Create Wa Bot</p>
+                   <div class="video" align="center" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 100%;">
+                  <iframe style="position: absolute; top: 0; left: 0;" width="100%" height="100%" src="https://youtu.be/j9MuiKDEaP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+         <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Akira</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Subscribe My <a href="../external.html?link=https://m.youtube.com/channel/UCvVd-kAsrJUjg0bwKqxUPeg" target="_blank">Channel</span>
             </div>
           </footer>
         </div>
       </div>
     </div>
-    
-    <script src="../vendors/js/vendor.bundle.base.js"></script>
-    <script src="../vendors/chart.js/Chart.min.js"></script>
+    <script>
+      swal({
+        title: 'Welcome To Website Akira APIs',
+        text: "Please Using Website",
+        imageUrl: 'https://i.ibb.co/MngCXjZ/20211009-052311.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Succes',
+        animation: true
+      })
+    </script>
+			<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>   
+        <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../vendors/owl-carousel-2/owl.carousel.min.js"></script>
     <script src="../js/off-canvas.js"></script>
     <script src="../js/hoverable-collapse.js"></script>
     <script src="../js/misc.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <script src="../js/settings.js"></script>
     <script src="../js/todolist.js"></script>
-    <script src="../js/ipanda.js"></script>
-    <script src="../js/waktu.js"></script>
-    <script src="../js/visitor.js"></script>
-  </body> 
-
-
- 
-
- 
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/zeeone.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../js/ruang-admin.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>  
+  
+<!-- Mirrored from api-alphabot.herokuapp.com/docs by HTTrack Website Copier/3.x [XR&CO'2017], Mon, 11 Oct 2021 22:18:44 GMT -->
 </html>
