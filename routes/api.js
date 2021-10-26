@@ -6,7 +6,7 @@ let zahirr = db.get("zahirr");
 } catch (e) {
 	console.log('')  
 }
-let creator = "Rizxyu"
+let creator = "Akira"
 let axios = require('axios')
 let fs = require('fs')
 let fetch = require('node-fetch');
@@ -365,6 +365,113 @@ loghandler = {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
+router.get('/remove', (req, res, next) => {
+    var apikey = req.query.apikey,
+        status = req.query.status,
+        apikeyInput  = req.query.apikeyInput,
+        email = req.query.email,
+        nomorhp = req.query.nomorhp
+        name = req.query.name,
+        age = req.query.age,
+        country = req.query.country;
+        exp = req.query.exp;
+
+    if (!apikey) return res.json(loghandler.notparam)
+    if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
+    if (apikey != 'SubsKira') return res.json(loghandler.invalidKey)
+
+    try {
+        zahirr.remove({
+            status: status,
+            apikey: apikeyInput,
+            email: email,
+            nomor_hp: nomorhp,
+            name: name,
+            age: age,
+            country: country,
+            exp: exp
+        })
+        .then(() => {
+             res.json({
+                  status: true,
+                  creator: `${creator}`,
+                  result: 'berhasil menghapus data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
+              })
+        })
+    } catch (e) {
+        console.log(e)
+        res.json(loghandler.error)
+    }
+})
+router.get('/cekapikey', async (req, res, next) => {
+	var apikeyInput = req.query.apikey
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	a = await cekApiKey(apikeyInput)
+	if (a) {
+	json = JSON.stringify({
+		status: true,
+		creator: creator,
+		result: {
+            status:a.status,
+			id: a._id,
+			apikey: a.apikey,
+			more_info: {
+				email: a.email,
+				nomor_hp: a.nomor_hp,
+				name: a.name,
+				age: a.age,
+				country: a.country,
+				exp:a.exp,
+			},
+		},
+		message: `Jangan lupa follow ${creator}`
+	})
+} else {
+	json = JSON.stringify({
+		status: false
+	})
+}
+res.send(JSON.parse(json))
+})
+
+router.get('/addapikey', (req, res, next) => {
+    var apikey = req.query.apikey,
+        status = req.query.status,
+        apikeyInput  = req.query.apikeyInput,
+        email = req.query.email,
+        nomorhp = req.query.nomorhp
+        name = req.query.name,
+        age = req.query.age,
+        country = req.query.country;
+        exp = req.query.exp;
+
+    if (!apikey) return res.json(loghandler.notparam)
+    if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
+    if (apikey != 'SubsKira') return res.json(loghandler.invalidKey)
+
+    try {
+        zahirr.insert({
+        	status: status,
+            apikey: apikeyInput,
+            email: email,
+            nomor_hp: nomorhp,
+            name: name,
+            age: age,
+            country: country,
+            exp: exp
+        })
+        .then(() => {
+              res.json({
+                  status: true,
+                  creator: `${creator}`,
+                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
+              })
+        })
+    } catch (e) {
+        console.log(e)
+        res.json(loghandler.error)
+    }
+})
      
  router.use(function (req, res) {
      res.status(404)
