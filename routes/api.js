@@ -6,7 +6,7 @@ let zahirr = db.get("zahirr");
 } catch (e) {
 	console.log('')  
 }
-let creator = "Akira"
+let creator = "Rizxyu"
 let axios = require('axios')
 let fs = require('fs')
 let fetch = require('node-fetch');
@@ -25,232 +25,130 @@ async function sleep(ms) {
 }
 
 loghandler = {
-    notparam: {
+  notparam: {
+
         status: false,
+
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Apikey dengan benar',
-        getApikey: 'Apikey??? Check in Dashboard'
+        message: 'masukan parameter apikey',
+        getApikey: 'gak punya apikey? chat gw aja yaaa di wa.me/62823283033323 , key nya gratis kok gan, jadi santuyy ajaa'
     },
     notkey: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Apikey yang valid'
+        message: 'masukan parameter key'
     },
     noturl: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukkan URL yang Valid'
+        message: 'Masukan URL'
+    },
+    notquery: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'Masukkan query'
     },
     notkata: {
+
         status: false,
+
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Kata dengan benar'
+        message: 'masukan parameter kata'
     },
     nottext: {
+
         status: false,
+
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Text dengan benar'
+        message: 'masukan parameter text'
     },
     nottext2: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Text2 dengan benar'
+        message: 'masukan parameter text2'
     },
     notnabi: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Nama Nabi dengan benar'
+        message: 'masukan parameter nabi'
     },
     nottext3: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan Text3 dengan benar'
+        message: 'masukan parameter text3'
     },
     nottheme: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukkan Theme dengan benar'
+        message: 'masukan parameter theme'
     },
     notusername: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Silahkan Masukkan username dengan benar'
+        message: 'masukan parameter username'
     },
     notvalue: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Silahkan Masukkan Value'
+        message: 'masukan parameter value'
     },
     notheme: {
     	status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Theme tidak tersedia silahkan masukkan texmaker/list atau baca documentasi'
+        message: 'theme tidak tersedia silahkan masukkan texmaker/list atau baca documentasi'
      },
     invalidKey: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Apikey??? Check in Dashboard'
+        message: 'apikey invalid, gak punya apikey? chat gw aja yaaa di wa.me/6283898698875 , key nya gratis kok gan, jadi santuyy ajaa'
     },
     invalidlink: {
         status: false,
         creator: `${creator}`,
-        message: 'Error, mungkin link anda tidak valid.'
+        message: 'error, mungkin link anda tidak valid.'
     },
     invalidkata: {
         status: false,
         creator: `${creator}`,
-        message: 'Error, mungkin kata tidak ada dalam api.'
+        message: 'error, mungkin kata tidak ada dalam api.'
     },
     notAddApiKey: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'Masukan parameter status, apikeyInput, email, nomorhp, name, age, country, exp'
+        message: 'masukan parameter status, apikeyInput, email, nomorhp, name, age, country, exp'
     },
     error: {
-        status: false,
+        status: 404,
         creator: `${creator}`,
-        message: 'Maaf, Karna Fiture ini Sedang ada Perbaikan'
+        message: 'An internal error occurred. Please report via WhatsApp wa.me/6288286421519'
     }
 }
 
-const listkey = ["SubsKira", "AkiraYT"];
-
-//APIKEY
-router.get('/cekapikey', async (req, res, next) => {
-	var apikeyInput = req.query.apikey
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	a = await cekApiKey(apikeyInput)
-	if (a) {
-	json = JSON.stringify({
-		status: true,
-		creator: creator,
-		result: {
-            status:a.status,
-			id: a._id,
-			apikey: a.apikey,
-			more_info: {
-				email: a.email,
-				nomor_hp: a.nomor_hp,
-				name: a.name,
-				age: a.age,
-				country: a.country,
-				exp:a.exp,
-			},
-		},
-		message: `Jangan lupa follow ${creator}`
-	})
-} else {
-	json = JSON.stringify({
-		status: false
-	})
-}
-res.send(JSON.parse(json))
-})
-
-router.get('/addapikey', (req, res, next) => {
-    var apikey = req.query.apikey,
-        status = req.query.status,
-        apikeyInput  = req.query.apikeyInput,
-        email = req.query.email,
-        nomorhp = req.query.nomorhp
-        name = req.query.name,
-        age = req.query.age,
-        country = req.query.country;
-        exp = req.query.exp;
-
-    if (!apikey) return res.json(loghandler.notparam)
-    if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'SubsKira') return res.json(loghandler.invalidKey)
-
-    try {
-        zahirr.insert({
-        	status: status,
-            apikey: apikeyInput,
-            email: email,
-            nomor_hp: nomorhp,
-            name: name,
-            age: age,
-            country: country,
-            exp: exp
-        })
-        .then(() => {
-              res.json({
-                  status: true,
-                  creator: `${creator}`,
-                  result: 'berhasil menambah data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
-              })
-        })
-    } catch (e) {
-        console.log(e)
-        res.json(loghandler.error)
-    }
-})
-
-router.get('/remove', (req, res, next) => {
-    var apikey = req.query.apikey,
-        status = req.query.status,
-        apikeyInput  = req.query.apikeyInput,
-        email = req.query.email,
-        nomorhp = req.query.nomorhp
-        name = req.query.name,
-        age = req.query.age,
-        country = req.query.country;
-        exp = req.query.exp;
-
-    if (!apikey) return res.json(loghandler.notparam)
-    if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'SubsKira') return res.json(loghandler.invalidKey)
-
-    try {
-        zahirr.remove({
-            status: status,
-            apikey: apikeyInput,
-            email: email,
-            nomor_hp: nomorhp,
-            name: name,
-            age: age,
-            country: country,
-            exp: exp
-        })
-        .then(() => {
-             res.json({
-                  status: true,
-                  creator: `${creator}`,
-                  result: 'berhasil menghapus data, status : ' + status + ', apikey : ' + apikeyInput + ', email : ' + email + ', nomor_hp : ' + nomorhp + ', name :  ' + name + ', age : ' + age + ', country : ' + country + ', exp : ' + exp
-              })
-        })
-    } catch (e) {
-        console.log(e)
-        res.json(loghandler.error)
-    }
-})
      // Downloader
     router.get('/tiktok', async(req, res) => {
-    	var apikeyInput = req.query.apikey,
 	      let url = req.query.url
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'SubsKira') return res.json(loghandler.invalidKey)
 	      if (!url) return res.json(loghandler.noturl)
 	      let result = await tiktok(url)
 	      try {
 		  res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              note: 'Follow Owner...',
+              note: 'Jangan Di Tembak Bang',
               result
           })
 	   } catch(err) {
@@ -259,17 +157,14 @@ router.get('/remove', (req, res, next) => {
 	     }
     })
     router.get('/igdl', async(req, res) => {
-    	var apikeyInput = req.query.apikey,
 	     let url = req.query.url
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'SubsKira') return res.json(loghandler.invalidKey)
 	     if (!url) return res.json(loghandler.noturl)
 	     let result = await hxz.igdl(url)
 	     try {
 	     res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              note: 'Follow Owner...',
+              note: 'Jangan Di Tembak Bang',
               result
           })
 	    } catch(err) {
@@ -278,17 +173,14 @@ router.get('/remove', (req, res, next) => {
 	       }
       })
      router.get('/mediafire', async(req, res) => {
-     	var apikeyInput = req.query.apikey,
 	     let url = req.query.url
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'SubsKira') return res.json(loghandler.invalidKey)
 	     if (!url) return res.json(loghandler.noturl)
 	     let result = await mediafireDl(url)
 	     try {
 	     res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              note: 'Follow Owner...',
+              note: 'Jangan Di Tembak Bang',
               result
           })
 	    } catch(err) {
@@ -304,7 +196,7 @@ router.get('/remove', (req, res, next) => {
 	     res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              note: 'Follow Owner...',
+              note: 'Jangan Di Tembak Bang',
               result
           })
 	    } catch(err) {
@@ -320,7 +212,7 @@ router.get('/remove', (req, res, next) => {
 	     res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              note: 'Follow Owner...',
+              note: 'Jangan Di Tembak Bang',
               result
           })
 	    } catch(err) {
@@ -336,7 +228,7 @@ router.get('/remove', (req, res, next) => {
 	     res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              note: 'Follow Owner...',
+              note: 'Jangan Di Tembak Bang',
               result
           })
 	    } catch(err) {
@@ -353,7 +245,7 @@ router.get('/remove', (req, res, next) => {
 	      res.json({ 
 		       status: 200,
 		       creator: `${creator}`,
-               note: 'Follow Owner...',
+               note: 'Jangan Di Tembak Bang',
                result 
            })
       })
@@ -365,7 +257,7 @@ router.get('/remove', (req, res, next) => {
 	      res.json({ 
 		       status: 200,
 		       creator: `${creator}`,
-               note: 'Follow Owner...',
+               note: 'Jangan Di Tembak Bang',
                result 
            })
         .catch(e => {
@@ -381,7 +273,7 @@ router.get('/remove', (req, res, next) => {
              res.json({
                   status: 200,
                   creator: `${creator}`,
-                  note: 'Follow Owner...',
+                  note: 'Jangan Di Tembak Bang',
                   result
              })
             .catch(e => {
@@ -395,7 +287,7 @@ router.get('/remove', (req, res, next) => {
 		    res.json({
                  status: 200,
                  creator: `${creator}`,
-                 note: 'Follow Owner...',
+                 note: 'Jangan Di Tembak Bang',
                  result
             })
        })
@@ -405,7 +297,7 @@ router.get('/remove', (req, res, next) => {
              res.json({
                   status: 200,
                   creator: `${creator}`,
-                  note: 'Follow Owner...',
+                  note: 'Jangan Di Tembak Bang',
                   result
               })
          })
